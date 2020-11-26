@@ -11,7 +11,7 @@ SideBot.on("message", msg =>{
     //check if author is a bot
     if(msg.author.bot) return;
     //check if message doesn't begin with prefix ! 
-    if(!msg.content.startsWith(prefix));
+    if(!msg.content.startsWith(prefix)) return;
 
     //get argument & command used
     const cmdBody = msg.content.slice(prefix.length);
