@@ -4,7 +4,7 @@ const SideBot = new Discord.Client;
 
 const prefix = "!";
 
-const waitingTime = 10000;
+const waitingTime = 20000;
 
 
 SideBot.on("message", msg =>{
@@ -46,21 +46,21 @@ SideBot.on("message", msg =>{
 
                 const reaction = collected.first();
                 if( tail && reaction.emoji.name === '📀'){
-                    sentmsg.channel.send("it's tail (📀) ! Congratulations <@"+ msg.author.id +">, you won  !");
+                    sentmsg.channel.send("it's tail (📀) ! Congratulations <@"+ msg.author.id +">, you won ✅ !");
                 } else if (tail && reaction.emoji.name === '💿') {
-                    sentmsg.channel.send("it's tail (📀) but you chose head (💿) ! You lost <@"+ msg.author.id +"> !");
+                    sentmsg.channel.send("it's tail (📀) but you chose head (💿) ! You lost <@"+ msg.author.id +"> ❌!");
                 } else if (head && reaction.emoji.name === '📀') {
-                    sentmsg.channel.send("it's head (💿) but you chose tail (📀)! You lost <@"+ msg.author.id +"> !");
+                    sentmsg.channel.send("it's head (💿) but you chose tail (📀)! You lost <@"+ msg.author.id +"> ❌ !");
                 } else if (head && reaction.emoji.name === '💿') {
-                    sentmsg.channel.send("it's head (💿) ! Congragulations <@"+ msg.author.id +">, you won !");
+                    sentmsg.channel.send("it's head (💿) ! Congragulations <@"+ msg.author.id +">, you won ✅!");
                 }
 
             })
             .catch(collected => {
-                msg.channel.send("<@"+ msg.author.id +">, you took too much time to respond or reacted with something else");
+                msg.channel.send("<@"+ msg.author.id +">, you took too much time to respond or reacted with something else 😬");
             });
         }).catch(collected => {
-            msg.channel.send('an error occured please try later :D ');
+            msg.channel.send('an error occured please try later 😄 ');
         });
         
     
@@ -94,21 +94,21 @@ SideBot.on("message", msg =>{
 
                 const reaction = collected.first();
                 if( tail && reaction.emoji.name === '📀'){
-                    sentmsg.channel.send("c'est pile (📀) ! Bravo <@"+ msg.author.id +">, vous avez gagné !");
+                    sentmsg.channel.send("c'est pile (📀) ! Bravo <@"+ msg.author.id +">, vous avez gagné ✅!");
                 } else if (tail && reaction.emoji.name === '💿') {
-                    sentmsg.channel.send("c'est pile (📀) dommage <@"+ msg.author.id +">, vous avez choisi face (💿) ! Perdu !");
+                    sentmsg.channel.send("c'est pile (📀) dommage <@"+ msg.author.id +">, vous avez choisi face (💿) ! Perdu ❌!");
                 } else if (head && reaction.emoji.name === '📀') {
-                    sentmsg.channel.send("c'est face (💿) mais vous avez choisi pile (📀)! Dommage <@"+ msg.author.id +">, c'est perdu !");
+                    sentmsg.channel.send("c'est face (💿) mais vous avez choisi pile (📀)! Dommage <@"+ msg.author.id +">, c'est perdu ❌!");
                 } else if (head && reaction.emoji.name === '💿') {
-                    sentmsg.channel.send("c'est face (💿) ! Bravo <@"+ msg.author.id +">, vous avez gagné !");
+                    sentmsg.channel.send("c'est face (💿) ! Bravo <@"+ msg.author.id +">, vous avez gagné ✅!");
                 }
 
             })
             .catch(collected => {
-                msg.channel.send("<@"+ msg.author.id +">, vous avez pris trop de temps ou vous avez réagi avec quelque chose d'innatendu");
+                msg.channel.send("<@"+ msg.author.id +">, vous avez pris trop de temps ou vous avez réagi avec quelque chose d'innatendu 😬");
             });
         }).catch(collected => {
-            msg.channel.send('il y a eu une erreur ré-essayez plus tard :D ');
+            msg.channel.send('il y a eu une erreur ré-essayez plus tard 😄 ');
         });
         
     
