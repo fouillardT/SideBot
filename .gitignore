@@ -1,0 +1,5 @@
+//ignore config file
+config.json
+node_modules/
+package-lock.json
+package.json
