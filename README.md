@@ -17,6 +17,12 @@ to start the bot, it's as easy as :
 
 $ node main.js
 
+OR 
+
+After cloning, just do :
+
+$ npm install 
+
 # Needs
 
 To make it work you'll need a token and some other things. 
