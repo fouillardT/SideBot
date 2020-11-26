@@ -38,12 +38,6 @@ SideBot.on("message", msg =>{
                 var tail = rdval < 0.5;
                 var head = rdval > 0.5;
 
-                if(tail){
-                    sentmsg.channel.send("the Result is tail (📀)");
-                } else {
-                    sentmsg.channel.send("the Result is head (💿)");
-                }
-
                 const reaction = collected.first();
                 if( tail && reaction.emoji.name === '📀'){
                     sentmsg.channel.send("it's tail (📀) ! Congratulations <@"+ msg.author.id +">, you won ✅ !");
@@ -85,12 +79,6 @@ SideBot.on("message", msg =>{
                 var rdval = array[Math.floor(Math.random()* Math.floor(999))];
                 var tail = rdval < 0.5;
                 var head = rdval > 0.5;
-
-                if(tail){
-                    sentmsg.channel.send("c'est tombé sur pile (📀)");
-                } else {
-                    sentmsg.channel.send("c'est tombé sur face (💿)");
-                }
 
                 const reaction = collected.first();
                 if( tail && reaction.emoji.name === '📀'){
