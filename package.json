@@ -4,11 +4,13 @@
   "description": "This is a bot that will basically do coin flips",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "author": "Théophane FOUILLARD",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.4.1"
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0"
   }
 }

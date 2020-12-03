@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Config = require('./config.json');
+const Config = require('./config.js');
 const SideBot = new Discord.Client;
 
 const prefix = "!";
@@ -105,6 +105,5 @@ SideBot.on("message", msg =>{
 
 });
 
-SideBot.login(Config.Token);
-
-
+SideBot.login(Config.discordToken);
+console.log("SideBot running !");

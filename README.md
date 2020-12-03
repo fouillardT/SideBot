@@ -3,25 +3,47 @@
 This is a discord bot that will basically do coin flips.
 The main goal was to help players choose side in games such as LoL, Chess, CSGO etc.
 
-# Discord modules 
+# How to run
 
-Import Discord node modules with 
+## Using node
 
-$ npm install discord.js
+Install dependencies with :
 
-then initialize it in the folder that you want with 
+    npm install
 
-$ npm init 
+Create a file nammed `.env` and put your Discord token like this :
 
-to start the bot, it's as easy as : 
 
-$ node main.js
+    DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 
-OR 
+(Change YOUR_DISCORD_TOKEN by your)
 
-After cloning, just do :
+Run it with :
 
-$ npm install 
+    npm start
+
+## Using Docker
+
+Build the docker image :
+
+    docker build --tag sidebot:latest .
+
+Run the Docker image :
+
+    docker run -d --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN --name sidebot sidebot
+
+Docker Compose exemple :
+
+```
+sidebot:
+    image: sidebot
+    container_name: sidebot
+    environment:
+      - DISCORD_TOKEN=YOUR_DISCORD_TOKEN
+    restart: unless-stopped
+```
+
+(Change YOUR_DISCORD_TOKEN by your)
 
 # Needs
 
